@@ -1,0 +1,75 @@
+/* components/Components.wxss */
+/* 订单详情 */
+.orderDetailsBox {
+  height: 100%;
+  padding: 0 20rpx;
+}
+.orderDetails {
+  font-size: 24rpx;
+  line-height: 80rpx;
+  color: #B0B0AE;
+}
+.orderDetailsList {
+  height: 150rpx;
+  position: relative;
+  border-top: 2rpx solid #E5E5E5;
+}
+.orderDetailsImg {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 20rpx;
+  margin-left: 0rpx;
+}
+.orderDetailsText1 {
+  font-weight: bold;
+  position: absolute;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}
+.orderDetailsText2 {
+  color: #B0B0AE;
+  font-size: 24rpx;
+  position: absolute;
+  margin-top: 70rpx;
+  margin-left: 20rpx;
+}
+.orderDetailsText3 {
+  font-weight: bold;
+  font-size: 30rpx;
+  position: absolute;
+  right: 0rpx;
+  top: 30rpx;
+}
+/* 满减优惠 */
+.orderDetailsDiscounts {
+  height: 100rpx;
+  border-top: 2rpx solid #E5E5E5;
+  line-height: 100rpx;
+  position: relative;
+}
+.orderDetailsTextRed {
+  background-color: red;
+  color: white;
+  margin-right: 10rpx;
+}
+.orderDetailsTextRed2 {
+  position: absolute;
+  font-size: 30rpx;
+  color: #FF9C35;
+  right: 0rpx;
+}
+/* 价格小计 */
+.orderDetailsSubtotal {
+  height: 120rpx;
+  border-top: 2rpx solid #E5E5E5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.orderDetailsSubtotalText1 {
+  font-size: 30rpx;
+}
+.orderDetailsSubtotalText2 {
+  font-size: 35rpx;
+  font-weight: bold;
+}

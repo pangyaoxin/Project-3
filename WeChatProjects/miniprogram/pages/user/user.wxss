@@ -1,0 +1,59 @@
+/* pages/user/user.wxss */
+.userBox {
+  width: 100%;
+  height: 500rpx;
+  background-color: #F7982A;
+  position: relative;
+}
+/* 用户头像 */
+.userImg {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  border: 10rpx solid #DC8723;
+  position: absolute;
+  left: 275rpx;
+  bottom: 100rpx;
+}
+/* 消费记录标题 */
+.userText1 {
+  height: 70rpx;
+  font-size: 30rpx;
+  background-color: #fff;
+  text-align: center;
+  font-weight: bold;
+  line-height: 70rpx;
+}
+/* 消费记录 */
+.consumptionList {
+  height: 150rpx;
+  background-color: #F8F8F8;
+  display: flex;
+  justify-content: space-between;
+  border: 2rpx solid #F2F2F2;
+}
+.consumptionListLeft {
+  width: 500rpx;
+  padding-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 10rpx;
+}
+.consumptionListLeftText1 {
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.consumptionListLeftText2 {
+  font-size: 22rpx;
+  color: #AFB1B4;
+}
+.consumptionListRight {
+  width: 100rpx;
+  font-size: 40rpx;
+  text-align: center;
+  line-height: 150rpx;
+  color: #F78C0A;
+  font-weight: bold;
+  padding-right: 10rpx;
+}

@@ -1,0 +1,240 @@
+/* pages/menu/menu.wxss */
+/* 顶部优惠样式 */
+.top {
+  height: 50rpx;
+  background-color: #FFFAE7;
+  text-align: center;
+  line-height: 50rpx;
+  color: #A09D8C;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+}
+.topText {
+  display: inline-block;
+  width: 50rpx;
+  background-color: red;
+  color: white;
+  margin-right: 20rpx
+}
+
+/* 菜单样式 */
+.menuBox {
+  display: flex;
+}
+/* 左侧菜单样式 */
+.menuLeftScroll {
+  width: 25%;
+  height: 100%;
+  background-color: #F9F9F9;
+}
+.menuLeftText {
+  width: 100%;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+}
+
+/* 左侧菜单默认样式 */
+.menuLeft {
+  font-weight: bold;
+  color: #81817F;
+  border-bottom: #999 1rpx solid;
+}
+/* 左侧菜单点击样式 */
+.active {
+  box-sizing: border-box;
+  color: #FF9C35;
+  border-left: #FF9C35 4px solid;
+  background-color: #fff;
+}
+
+/* 右侧菜单 */
+.menuRightScroll {
+  width: 75%;
+}
+.menuName {
+  width: 100%;
+  height: 70rpx;
+  color: #FF9C35;
+  background-color: #F2F2F2;
+  line-height: 70rpx;
+  text-indent: 20rpx;
+}
+.menuRight {
+  width: 100%;
+  height: 100rpx;
+  margin-top: 10rpx;
+  margin-bottom: 20rpx;
+  position: relative;
+}
+/* 商品图片 */
+.menuRightImg {
+  width: 100rpx;
+  height: 100rpx;
+}
+/* 商品名称 */
+.tradeName {
+  position: absolute;
+  top: 0rpx;
+  left: 150rpx;
+}
+/* 商品价格 */
+.price {
+  position: absolute;
+  bottom: 5rpx;
+  left: 150rpx;
+  color: #CCAFB9;
+  font-size: 30rpx;
+}
+
+.menuRightHandle {
+  width: 170rpx;
+  height: 100%;
+  position: absolute;
+  right: 20rpx;
+  top: 0;
+}
+/* 显示加入购物车商品的数量 */
+/* 移除购物车商品按钮 */
+.btnMin {
+  position: absolute;
+  left: 10rpx;
+  top: 30rpx;
+}
+.btnMinImg {
+  border-radius: 50%;
+  border: 1rpx solid #000;
+}
+/* 加入购物车商品数量 */
+.cartAmount {
+  position: absolute;
+  left: 75rpx;
+  top: 30rpx;
+}
+/* 加入购物车商品按钮 */
+.btnAdd {
+  position: absolute;
+  right: 10rpx;
+  top: 30rpx;
+}
+.btnAddImg {
+  border-radius: 50%;
+}
+
+/* 底部 */
+/* 优惠打折信息 */
+.bottomText {
+  height: 60rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 60rpx;
+  background-color: #FFCD97;
+}
+/* 购物车 */
+.cartBox {
+  display: flex;
+  height: 100rpx;
+  color: #999;
+}
+.cartLeft {
+  width: 70%;
+  height: 100rpx;
+  background-color: #343434;
+  position: relative;
+}
+/* 购物车提醒气泡 */
+.bubblingBox {
+  position: relative;
+}
+.bubbling {
+  width: 35rpx;
+  height: 35rpx;
+  color: #fff;
+  font-size: 28rpx;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 80rpx;
+  top: 10rpx;
+  text-align: center;
+  line-height: 35rpx;
+}
+.cartLeftImg {
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  left: 20rpx;
+  top: 10rpx;
+}
+.cartText {
+  position: absolute;
+  left: 130rpx;
+  line-height: 100rpx;
+}
+.cartRight {
+  width: 30%;
+  line-height: 100rpx;
+  text-align: center;
+  background-color: #ECECEC;
+}
+
+/* 加入购物车的商品列表 */
+.cartListBox {
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  bottom: 160rpx;
+}
+.cartScroll {
+  height: 400rpx;
+}
+.cartListTop {
+  height: 120rpx;
+  background-color: #F0F0F0;
+  color: #CCAFB9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cartListLeft {
+  border-left: 10rpx solid #FF9C35;
+  margin-left: 50rpx;
+  padding-left: 20rpx;
+}
+.cartListRight {
+  margin-right: 20rpx;
+}
+/* 购物车列表 */
+.cartList {
+  height: 120rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2rpx solid #F0F0F0;
+}
+.cartListName {
+  margin-left: 50rpx;
+}
+.cartListPirce {
+  margin-right: 50rpx;
+  color: #FF9C35;
+}
+.cartListAmountBox {
+  width: 300rpx;
+  display: flex;
+  margin-right: 30rpx;
+  justify-content: space-between;
+}
+/* 增加，减少 */
+.cartListAdd, .cartListMin {
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+}
+.cartListAdd {
+  border: 1rpx solid #FF9C35;
+}
+.cartListMin {
+  border: 1rpx solid #000;
+}

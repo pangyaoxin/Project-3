@@ -1,0 +1,35 @@
+<!--pages/order2/order2.wxml-->
+<!-- 订单确认页面 -->
+<view class="order2Box">
+  <!-- 订单确认提醒 -->
+  <view class="orderReminder">
+    <text class="orderReminderText">请确认您的订单！</text>
+  </view>
+
+  <!-- 订单详情-组件 -->
+  <components-order-details
+  cartList="{{cartList}}"
+  totalPrices="{{totalPrices}}"
+  favorable="{{favorable}}"
+  fullPrice="{{fullPrice}}">
+  </components-order-details>
+
+  <!-- 备注 -->
+  <view class="remarksBox">
+    <text class="remarksText">备注：</text>
+    <textarea class="remarksTextarea" 	placeholder="如有其他要求，请输入备注。"
+    model:value="{{remarkText}}"/>
+  </view>
+
+  <!-- <view class="box"></view> -->
+
+  <!-- 价格合计 -->
+  <view class="bottomBox">
+    <view class="bottomLeft">
+      合计：￥{{ totalPrices }}
+    </view>
+    <view class="bottomRight" bindtap="payHandle">
+      支付
+    </view>
+  </view>
+</view>

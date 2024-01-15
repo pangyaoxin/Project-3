@@ -1,0 +1,65 @@
+/* pages/order/order.wxss */
+.orderList {
+  width: 750rpx;
+  height: 200rpx;
+  background-color: #F8F8F8;
+  border-bottom: 2rpx solid #F2F2F2;
+  padding-top: 30rpx;
+}
+/* 下单时间 */
+.orderTime {
+  color: #BCB2AB;
+  font-size: 30rpx;
+  padding-left: 20rpx;
+}
+/* 订单信息 */
+.orderBox1 {
+  height: 100rpx;
+  display: flex;
+}
+/* 左边信息 */
+.orderLeft {
+  width: 500rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding-left: 20rpx;
+}
+.text1 {
+  color: #BCB2AB;
+  font-size: 30rpx;
+  padding: 0 20rpx;
+}
+.text2 {
+  color: #71737C;
+  font-size: 20rpx;
+}
+/* 右边操作 */
+.orderRight {
+  width: 250rpx;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20rpx;
+}
+.btn1, .btn2 {
+  width: 100rpx;
+  font-weight: bold;
+  text-align: center;
+}
+/* 查看详情 */
+.btn1 {
+  height: 50rpx;
+  font-size: 22rpx;
+  border: 4rpx solid #FFB360;
+  color: #FFB360;
+  line-height: 50rpx;
+}
+/* 取餐 */
+.btn2 {
+  height: 70rpx;
+  background-color: #FFD161;
+  font-size: 30rpx;
+  color: #fff;
+  line-height: 70rpx;
+}

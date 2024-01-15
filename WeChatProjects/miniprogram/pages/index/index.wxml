@@ -1,0 +1,21 @@
+<!--index.wxml-->
+<!-- 轮播图 -->
+<view>
+  <swiper indicator-dots="true" autoplay="ture" circular="ture" class="imgShow">
+    <swiper-item wx:for="{{ homeSwiper }}" wx:key="index">
+      <image src="{{ item.src }}" mode="widthFix" style="width: 100%;"/>
+    </swiper-item>
+  </swiper>
+</view>
+<!-- 点餐按钮 -->
+<button class="menuOpen" bindtap="menuOpen">开启点餐之旅</button>
+<!-- 一张广告展示图片 -->
+<view class="boxShow">
+  <image src="cloud://mini-program-01-1gxpekni7484dbc6.6d69-mini-program-01-1gxpekni7484dbc6-1318290949/home/06.jpg" mode="aspectFill" class="img2"/>
+</view>
+<!-- 商品分类 -->
+<view class="boxShow2">
+  <view wx:for="{{ homeList }}" wx:key="index">
+    <image src="{{ item.src }}" mode="scaleToFill" class="img3"/>
+  </view>
+</view>

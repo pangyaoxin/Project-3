@@ -1,0 +1,7 @@
+<!--components/ComponentsBottom/ComponentsBottom.wxml-->
+<view class="box">
+  <view class="left">
+  </view>
+  <view class="right">
+  </view>
+</view>

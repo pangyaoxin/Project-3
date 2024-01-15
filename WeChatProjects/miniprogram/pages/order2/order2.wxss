@@ -1,0 +1,129 @@
+/* pages/order2/order2.wxss */
+/* 订单确认提醒 */
+.orderReminder {
+  height: 100rpx;
+  line-height: 100rpx;
+  padding-left: 10rpx;
+  border-bottom:#F2F2F2 solid 20rpx;
+}
+.orderReminderText {
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+/* 订单详情 */
+.orderDetailsBox {
+  height: 100%;
+  background-color: aquamarine;
+  margin: 20rpx 0;
+}
+.orderDetails {
+  font-size: 24rpx;
+  line-height: 80rpx;
+  margin-left: 20rpx;
+  color: #B0B0AE;
+}
+.orderDetailsList {
+  height: 150rpx;
+  background-color: beige;
+  position: relative;
+  border-top: 2rpx solid #B0B0AE;
+}
+.orderDetailsImg {
+  width: 100rpx;
+  height: 100rpx;
+  background-color: darkblue;
+  margin: 20rpx;
+}
+.orderDetailsText1 {
+  font-weight: bold;
+  position: absolute;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}
+.orderDetailsText2 {
+  color: #B0B0AE;
+  font-size: 24rpx;
+  position: absolute;
+  margin-top: 70rpx;
+  margin-left: 20rpx;
+}
+.orderDetailsText3 {
+  font-weight: bold;
+  font-size: 30rpx;
+  position: absolute;
+  right: 20rpx;
+  top: 30rpx;
+}
+.orderDetailsDiscounts {
+  height: 100rpx;
+  background-color: aqua;
+  border-top: 2rpx solid #E3E3E3;
+  line-height: 100rpx;
+  position: relative;
+}
+.orderDetailsTextRed {
+  background-color: red;
+  color: white;
+  margin-left: 20rpx;
+  margin-right: 10rpx;
+}
+.orderDetailsTextRed2 {
+  position: absolute;
+  font-size: 30rpx;
+  color: #FF9C35;
+  right: 20rpx;
+}
+/* 价格小计 */
+.orderDetailsSubtotal {
+  height: 150rpx;
+  background-color: darkgray;
+  line-height: 150rpx;
+}
+
+/* 备注 */
+.remarksBox {
+  padding: 20rpx;
+  border-top: 20rpx solid #F2F2F2;
+}
+.remarksText {
+  color: #9a9a9a;
+}
+.remarksTextarea {
+  width: 100%;
+  height: 200rpx;
+  color: #707070;
+  font-size: 28rpx;
+  text-indent: 20rpx;
+  background-color: #F2F2F2;
+}
+
+/* 价格合计 */
+.bottomBox {
+  height: 120rpx;
+  width: 100%;
+  display: flex;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+.bottomLeft {
+  width: 70%;
+  height: 100%;
+  line-height: 120rpx;
+  background-color: #333333;
+  padding-left: 30rpx;
+}
+.bottomRight {
+  width: 30%;
+  height: 100%;
+  background-color: #FE9D2C;
+  text-align: center;
+  line-height: 120rpx;
+}
+
+.box {
+  height: 80rpx;
+  background-color: #F2F2F2
+}

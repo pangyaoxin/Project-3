@@ -1,0 +1,30 @@
+<!--components/Components.wxml-->
+<!-- 订单 -->
+<view class="orderDetailsBox">
+  <text class="orderDetails">订单详情</text>
+  <!-- 商品列表 -->
+  <scroll-view scroll-y="true" style="height: 300rpx;">
+    <view class="orderDetailsList" wx:for="{{cartList}}" wx:key="index">
+      <image class="orderDetailsImg" src="{{ item.url }}" mode="aspectFit"/>
+      <text class="orderDetailsText1">{{ item.name }}</text>
+      <text class="orderDetailsText2">×{{ item.quantity }}</text>
+      <text class="orderDetailsText3">￥{{ item.price }}</text>
+    </view>
+  </scroll-view>
+  <!-- 满减优惠 -->
+  <!-- 满足满减条件 -->
+  <view class="orderDetailsDiscounts" wx:if="{{totalPrices >= fullPrice}}">
+    <text class="orderDetailsTextRed">减</text>满减优惠
+    <text class="orderDetailsTextRed2">-￥{{favorable}}</text>
+  </view>
+  <!-- 不满足满减条件 -->
+  <view class="orderDetailsDiscounts" wx:else>
+    <text class="orderDetailsTextRed">减</text>满减优惠
+    <text class="orderDetailsTextRed2">-￥0</text>
+  </view>
+  <!-- 价格小计 -->
+  <view class="orderDetailsSubtotal">
+    <text class="orderDetailsSubtotalText1">小计</text>
+    <text class="orderDetailsSubtotalText2">￥{{totalPrices}}</text>
+  </view>
+</view>

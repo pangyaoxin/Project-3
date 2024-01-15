@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "订单确认",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "components-order-details": "../../components/ComponentsOrderDetails/ComponentsOrderDetails"
+  }
+}

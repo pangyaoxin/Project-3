@@ -1,0 +1,18 @@
+<!--pages/order/order.wxml-->
+<!-- 主页订单页面 -->
+<!-- 订单取餐号 -->
+  <view class="orderList" wx:for="{{ orderData }}" wx:key="index">
+    <text class="orderTime">下单时间：{{ item.orderTime}}</text>
+    <view class="orderBox1">
+      <view class="orderLeft">
+        <!-- {{ item.orderCommodity[0].name}} -->
+        {{ JSON.parse(item.orderCommodity)[0].name }}
+        <text class="text1">等{{item.orderCommodity.lenght}}件商品</text>
+        <text class="text2">￥{{item.orderTotalPrices}}</text>
+      </view>
+      <view class="orderRight">
+        <view class="btn1">查看详情</view>
+        <view class="btn2">未取餐</view>
+      </view>
+    </view>
+  </view>

@@ -1,0 +1,43 @@
+<!--pages/order3.wxml-->
+<!-- 订单支付后页面 -->
+<view class="order3Box">
+  <!-- 顶部取餐号 -->
+  <view class="top">
+    <!-- 取餐号 -->
+    <view class="top1" bindtap="mealNumber">
+      取餐号
+    </view>
+    <!-- 取餐信息 -->
+    <view class="top2">
+      <text class="top2Text1">A01</text>
+      <text class="top2Text2">正在精心制作中...</text>
+      <text class="top2Text3">备注：{{ remarkText }}</text>
+      <text class="top2Text4">美食制作中，尽快为您服务😊</text>
+    </view>
+  </view>
+
+  <!-- 订单详情组件 -->
+  <components-order-details
+  cartList="{{cartList}}"
+  totalPrices="{{totalPrices}}"
+  favorable="{{favorable}}"
+  fullPrice="{{fullPrice}}">
+  </components-order-details>
+
+  <!-- 订单号 -->
+  <view class="orderNumberBox">
+    <view class="orderNumber">
+      <text>订单号码</text>
+    </view>
+    <view class="orderTime">
+      <text>下单时间 {{orderTime}}</text>
+    </view>
+    <view class="payTime">
+      <text>付款时间 {{payTime}}</text>
+    </view>
+  </view>
+
+  <view class="voucher">
+    请凭此页面至取餐柜台领取饮料
+  </view>
+</view>

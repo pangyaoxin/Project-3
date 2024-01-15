@@ -1,0 +1,110 @@
+<!-- 优惠提示 -->
+<view class="top">
+  <text class="topText">减</text>满{{ fullPrice }}元减{{ favorable }}元（在线支付专享）
+</view>
+
+<!-- 菜单 -->
+<view class="menuBox">
+  <!-- 左边菜单种类名 -->
+  <scroll-view class="menuLeftScroll" scroll-y="ture">
+    <view class="menuLeft {{ menuIndex === index ? 'active': '' }}" wx:for="{{ menuData }}" wx:key="index"
+    bindtap="navChange" data-index="{{index}}">
+      <view class="menuLeftText">
+        {{ item.name }}
+      </view>
+    </view>
+  </scroll-view>
+
+  <!-- 右边菜单种类详情 -->
+  <scroll-view class="menuRightScroll" scroll-y="ture" scroll-into-view="{{ toView }}"
+  style="height:{{ scroll_height }}rpx">
+    <block wx:for="{{ menuData }}" wx:key="index">
+      <!-- 商品分类 -->
+      <view class="menuName" id="block{{index}}">{{ item.name }}</view>
+      <!-- 商品列表 -->
+      <view class="menuRight" scroll-y="ture" wx:for="{{ item.foods }}" wx:key="index">
+        <!-- 商品图片 -->
+        <image class=".menuRightImg" src="{{ item.url }}" mode="aspectFit"/>
+        <!-- 商品名称 -->
+        <text class="tradeName">{{ item.name }}</text>
+        <!-- 商品价格 -->
+        <text class="price">￥{{ item.price }}</text>
+        <!-- 购买操作 -->
+        <view class="menuRightHandle">
+          <!--  此处预留wx：if -->
+          <block wx:if="{{ false }}">
+            <!-- 减去 购物车按钮 -->
+            <view class="btnMin" bindtap="cartMin"
+            data-value="{{ {quantity: item.quantity} }}">
+              <image class="btnMinImg" src="cloud://mini-program-01-1gxpekni7484dbc6.6d69-mini-program-01-1gxpekni7484dbc6-1318290949/menu/icon-minus2.png"
+              mode="aspectFit" style="height: 45rpx; width: 45rpx;"/>
+            </view>
+            <!-- 显示加入购物车商品的数量 -->
+            <text class="cartAmount">{{ item.quantity }}</text>
+          </block>
+          <!-- 加入 购物车按钮 -->
+          <view class="btnAdd" bindtap="cartAdd"
+          data-value="{{ {name:item.name, price: item.price, quantity: item.quantity, url: item.url} }}">
+            <image class="btnAddImg" src="cloud://mini-program-01-1gxpekni7484dbc6.6d69-mini-program-01-1gxpekni7484dbc6-1318290949/menu/icon-add.jpg"
+            mode="aspectFit" style="height: 50rpx; width: 50rpx;"/>
+          </view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>
+
+<!-- 加入购物车的商品列表 -->
+<view class="cartListBox" wx:if="{{ cartChange }}">
+  <view class="cartListTop">
+    <view class="cartListLeft">
+      <text>已选商品</text>
+    </view>
+    <view class="cartListRight">
+      <text bindtap="removeCat">🗑清空购物车</text>
+    </view>
+  </view>
+  <scroll-view class="cartScroll" scroll-y="ture">
+    <!-- 加入购物车商品列表 -->
+    <view class="cartList" wx:for="{{ cartList }}" wx:key="index">
+      <!-- 商品名称 -->
+      <text class="cartListName">{{ item.name }}</text>
+      <view class="cartListAmountBox">
+        <!-- 商品价格 -->
+        <view class="cartListPirce">￥{{ item.price }}</view>
+        <!-- 加入购物车商品数量 -->
+        <view bindtap="cartMin" data-index="{{ index }}">
+          <image class="cartListMin" src="cloud://mini-program-01-1gxpekni7484dbc6.6d69-mini-program-01-1gxpekni7484dbc6-1318290949/menu/icon-minus2.png" mode="aspectFit"/>
+        </view>
+        <text class="cartListAmount">{{ item.quantity }}</text>
+        <view bindtap="cartAdd"
+        data-value="{{ {name:item.name, price: item.price, quantity: item.quantity} }}">
+          <image class="cartListAdd" src="cloud://mini-program-01-1gxpekni7484dbc6.6d69-mini-program-01-1gxpekni7484dbc6-1318290949/menu/icon-add.jpg" mode="aspectFit"/>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+<!-- 底部购物车 -->
+<view>
+  <!-- 购物车优惠提示 -->
+  <view class="bottomText">
+    满{{ fullPrice }}元立减{{ favorable }}元，
+    还差{{ fullPrice - totalPrices >= 0 ? fullPrice - totalPrices : 0 }}元
+  </view>
+  <!-- 购物车 -->
+  <view class="cartBox">
+    <view class="cartLeft" bindtap="cartOpen">
+      <view class="bubblingBox">
+        <image class="cartLeftImg" src="cloud://mini-program-01-1gxpekni7484dbc6.6d69-mini-program-01-1gxpekni7484dbc6-1318290949/menu/icon-cart.png" mode="aspectFit"/>
+        <text class="bubbling">{{ commodityQuantity }}</text>
+      </view>
+      <text class="cartText" wx:if="{{ cartList.length !== 0}}">￥{{ totalPrices }}</text>
+      <text class="cartText" wx:else >购物车是空的</text>
+    </view>
+    <view class="cartRight" bindtap="handleCart">
+      选好了
+    </view>
+  </view>
+</view>

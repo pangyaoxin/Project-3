@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "components-order-details": "../../components/ComponentsOrderDetails/ComponentsOrderDetails"
+  }
+}

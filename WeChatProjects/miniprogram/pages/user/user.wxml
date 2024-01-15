@@ -1,0 +1,18 @@
+<!--pages/user/user.wxml-->
+<view class="userBox">
+  <!-- 用户头像 -->
+  <image class="userImg" src="cloud://mini-program-01-1gxpekni7484dbc6.6d69-mini-program-01-1gxpekni7484dbc6-1318290949/user/超人可达鸭.jpg" mode="aspectFit"/>
+</view>
+<!-- 消费记录 -->
+<view>
+  <view class="userText1">消费记录</view>
+  <view class="consumptionList">
+    <view class="consumptionListLeft">
+      <text class="consumptionListLeftText1">消费</text>
+      <text class="consumptionListLeftText2">2023年6月17日</text>
+    </view>
+    <view class="consumptionListRight">
+      ￥40
+    </view>
+  </view>
+</view>
